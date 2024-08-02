@@ -14,10 +14,7 @@ public class DataEditor extends JPanel {
         @Override
         public boolean isCellEditable(int row, int column)
         {
-            if (column == 1) {
-                return true;
-            }
-            return false;
+            return column == 1;
         }
     };
     public JTable table;
@@ -61,7 +58,7 @@ public class DataEditor extends JPanel {
                     model.setValueAt("", 1, 1);
                     break;
                 default:
-                    if (i.data2Name.equals("")) {
+                    if (i.data2Name.isEmpty()) {
                         model.setValueAt(i.dataName, 0, 0);
                         model.setValueAt(i.data, 0, 1);
                         model.setValueAt("", 1, 0);

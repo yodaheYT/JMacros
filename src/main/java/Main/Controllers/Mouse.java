@@ -4,7 +4,6 @@ import Main.Util.Tuple;
 import Main.Util.Clock;
 
 import java.awt.*;
-import java.util.Objects;
 
 import static java.awt.event.InputEvent.*;
 
@@ -46,7 +45,6 @@ public class Mouse {
             }
         } catch(Exception e) {
             System.out.println("MoveTo Failed! Position: (" + pos.getX() + ", " + pos.getY() + ")");
-            e.printStackTrace();
         }
     }
     public void Press(int Button) {

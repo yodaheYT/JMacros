@@ -20,6 +20,6 @@ public class Instruction {
     }
 
     public void run(Keyboard keyboard, Mouse mouse, RuntimeController runtimeController) {
-        return;
+
     }
 }

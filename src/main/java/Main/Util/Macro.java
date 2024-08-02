@@ -21,7 +21,7 @@ public class Macro {
         keyboard = new Keyboard();
         mouse = new Mouse();
         runtimeController = new RuntimeController();
-        Instructions = new ArrayList<Instruction>();
+        Instructions = new ArrayList<>();
     }
 
     public void addInstruction(Instruction instruction) {
@@ -50,16 +50,13 @@ public class Macro {
 
     public void run(JMenuItem runButton, JButton runButton2) {
         playing = true;
-        thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < Instructions.size(); i++) {
-                    Instructions.get(i).run(keyboard, mouse, runtimeController);
-                }
-                playing = false;
-                runButton.setText("Run");
-                runButton2.setText("Run");
+        thread = new Thread(() -> {
+            for (Instruction instruction : Instructions) {
+                instruction.run(keyboard, mouse, runtimeController);
             }
+            playing = false;
+            runButton.setText("Run");
+            runButton2.setText("Run");
         });
         thread.start();
     }

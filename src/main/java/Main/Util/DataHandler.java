@@ -5,8 +5,6 @@ import Main.Instructions.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +31,8 @@ public class DataHandler {
                     path += ".jmacro";
                 }
                 FileWriter fileWriter = new FileWriter(path);
-                for (int i = 0; i < lines.size(); i++) {
-                    fileWriter.write(lines.get(i) + System.lineSeparator());
+                for (String line : lines) {
+                    fileWriter.write(line + System.lineSeparator());
                 }
                 fileWriter.close();
             } catch (Exception exception) {
@@ -67,43 +65,26 @@ public class DataHandler {
                         if (!(curr == null)) {
                             instructions.add(curr);
                         }
-                        switch (string.split(":")[0]) {
-                            case "ClickKey":
-                                curr = new ClickKey(0);
-                                break;
-                            case "PressKey":
-                                curr = new PressKey(0);
-                                break;
-                            case "ReleaseKey":
-                                curr = new ReleaseKey(0);
-                                break;
-                            case "Wait":
-                                curr = new Wait(0);
-                                break;
-                            case "JumpToMouse":
-                                curr = new JumpToMouse(0);
-                                break;
-                            case "MoveToMouse":
-                                curr = new MoveToMouse(0);
-                                break;
-                            case "ClickMouse":
-                                curr = new ClickMouse(0);
-                                break;
-                            case "PressMouse":
-                                curr = new PressMouse(0);
-                                break;
-                            case "UnpressMouse":
-                                curr = new UnpressMouse(0);
-                                break;
-                            case "Scroll":
-                                curr = new Scroll(0);
-                                break;
-                        }
+                        curr = switch (string.split(":")[0]) {
+                            case "ClickKey" -> new ClickKey(0);
+                            case "PressKey" -> new PressKey(0);
+                            case "ReleaseKey" -> new ReleaseKey(0);
+                            case "Wait" -> new Wait(0);
+                            case "JumpToMouse" -> new JumpToMouse(0);
+                            case "MoveToMouse" -> new MoveToMouse(0);
+                            case "ClickMouse" -> new ClickMouse(0);
+                            case "PressMouse" -> new PressMouse(0);
+                            case "UnpressMouse" -> new UnpressMouse(0);
+                            case "Scroll" -> new Scroll(0);
+                            default -> curr;
+                        };
                     } else {
-                        string = string.split("    ")[1];
+                        string = string.split(" {4}")[1];
                         if (string.split("=")[0].equals("data")) {
+                            assert curr != null;
                             curr.data = Integer.parseInt(string.split("=")[1]);
                         } else if (string.split("=")[0].equals("data2")) {
+                            assert curr != null;
                             curr.data2 = Integer.parseInt(string.split("=")[1]);
                         }
                     }
@@ -113,7 +94,6 @@ public class DataHandler {
 
                 return instructions;
             } catch (Exception exception) {
-                exception.printStackTrace();
                 System.out.println("Import Failed!");
             }
         }

@@ -1,11 +1,6 @@
 package Main.UserInterface;
 
-import Main.Main;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
-import java.util.Objects;
 
 public class Toolbar extends JToolBar {
     public JButton ToolbarStart;

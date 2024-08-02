@@ -6,9 +6,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Keyboard {
-    //TODO: public void PressKey(key)
-    //TODO: public void ReleaseKey(key)
-    //TODO: public void Type(string)
     Robot robot;
 
     Clock clock;
