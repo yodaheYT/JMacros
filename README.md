@@ -36,3 +36,51 @@ java -jar (release).jar
 ```
 OR<br>
 double click the file
+
+# Instructions
+ClickKey -> presses and releases x key
+ClickMouse -> presses and releases x mouse button
+JumpToMouse -> jumps mouse to position
+MoveToMouse -> smoothly moves mouse to x position over one second
+PressKey -> press x key
+PressMouse -> press x mouse button
+ReleaseKey -> releases x key
+Scroll -> scrolls x notches (use -int to scroll backwards)
+UnpressMouse -> releases x mouse button
+Wait -> waits x milliseconds
+
+# Importing and exporting
+To export a macro:
+- Go to Macro menu -> Export
+- Select a Location
+- Enter a file name
+- Click save
+
+To Import a macro:
+- Go to Macro menu -> Import
+- Go to the location of your `.jmacro` file
+- Select your `.jmacro` file
+- Click Open
+
+# Creating and running a macro
+## Currently you CANNOT reorder objects in a macro without exporting, opening the `.jmacro` file in a text editor, and moving objects around, and reimporting
+1. Add action by going to JMacros Menu -> Add Instruction -> Whatever you want to add
+2. Use the properties panel to modify the object <Br>
+<span style="color:#aaffaa">TIP</span>: if you make a mistake and your macro doesn't work, you can click on an instruction in the macro instruction list to modify it.
+3. Repeat steps 1 & 2 until your macro is finished
+4. Press Run and watch it run
+5. Export
+
+# Finding mouse coordinates
+1. Go to JMacros menu then mouse position finder
+2. Put your mouse at the desired position
+3. Note down the coordinates
+4. Put them in the properties panel for your instruction
+
+# Mouse buttons
+1: left click<br>
+2: middle click<br>
+3: right click
+
+# Keys
+Just type the letter in the properties panel
