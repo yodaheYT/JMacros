@@ -9,9 +9,9 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/yodaheYT/JMacros?style=for-the-badge)
 ![GitHub Release](https://img.shields.io/github/v/release/yodaheYT/JMacros?display_name=release&style=for-the-badge)
 
-| Release | Link                                                                               | Status                                                                                                                                                                                                          |
-|---------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Testing | [GitHub Releases](https://github.com/yodaheYT/JMacros/releases/tag/V0.3) | [![GitHub Testing Releases](https://img.shields.io/github/downloads/yodaheYT/JMacros/V0.3/total?style=for-the-badge&logo=github)](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Testing) |
+| Release | Link                                                                       | Status                                                                                                                                                                                                 |
+|---------|----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Testing | [GitHub Releases](https://github.com/yodaheYT/JMacros/releases/tag/V0.0.1) | [![GitHub Testing Releases](https://img.shields.io/github/downloads/yodaheYT/JMacros/v0.0.1/total?style=for-the-badge&logo=github)](https://github.com/yodaheYT/HomelabTelevision/releases/tag/v0.0.1) |
 
 # What is JMacros?
 JMacros is a tool to write simple macro scripts and export/import them as `.jmacro` files.
