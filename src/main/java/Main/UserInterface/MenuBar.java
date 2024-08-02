@@ -43,8 +43,7 @@ public class MenuBar extends JMenuBar {
         JMacrosAbout.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame, "JMacros v0.0.1\nDeveloped by yodaheyt\n© 2024 yodahe️yt.github.io | GNU GPLv3.0\nSupport server: https://yodaheyt.github.io/discord", "About JMacros", JOptionPane.INFORMATION_MESSAGE);
-
+                JOptionPane.showMessageDialog(frame, "JMacros v0.0.1\nDeveloped by yodaheyt\n©2024 yodaheyt.github.io | GNU GPLv3.0\nSupport server: https://yodaheyt.github.io/discord", "About JMacros", JOptionPane.INFORMATION_MESSAGE);
             }
         });
 
